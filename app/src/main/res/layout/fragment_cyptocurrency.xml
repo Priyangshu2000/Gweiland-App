@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.cyptocurrency">
+
+    <RelativeLayout
+        android:id="@+id/cyrpto_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btc_cardview"
+            android:layout_width="317dp"
+            android:layout_height="131dp"
+            android:backgroundTint="#1A00CE08"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="0dp"
+            android:layout_centerHorizontal="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btc_graph"
+                android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btc_graph"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/btc_name" />
+
+                <ImageView
+                    android:id="@+id/btc_icon"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/btc_icon"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/btc_name" />
+
+
+                <TextView
+                    android:id="@+id/BTC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btc"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_toRightOf="@id/btc_icon"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="14dp"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:id="@+id/btc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btc_name"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_below="@id/BTC"
+                    android:layout_toRightOf="@id/btc_icon"
+                    android:layout_marginStart="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/btc_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btc_price"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/btc_delta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btc_delta"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/btc_price"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#00CE08"
+                    />
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/top_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_crypto"
+            android:textSize="18sp"
+            android:textColor="#0B0B0B"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_below="@id/btc_cardview"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_below="@id/btc_cardview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/view_all"
+            android:textColor="#800B0B0B"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/crypto_recycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_currency"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"/>
+    </RelativeLayout>
+
+</FrameLayout>

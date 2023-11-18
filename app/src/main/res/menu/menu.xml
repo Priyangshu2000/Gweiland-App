@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/curr_shop"
+        android:icon="@drawable/e_shop"
+        android:title="€-$hop"
+        />
+
+    <item
+        android:id="@+id/exchange"
+        android:icon="@drawable/exchange"
+        android:title="Exchange"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/metaverse"
+        android:title=""/>
+
+
+    <item
+        android:id="@+id/launchpads"
+        android:icon="@drawable/launchpads"
+        android:title="Launchpads"
+        />
+
+    <item
+        android:id="@+id/wallet"
+        android:icon="@drawable/wallets"
+        android:title="Wallet" />
+</menu>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Gweiland</string>
+    <string name="exchanges">Exchanges</string>
+    <string name="search_box">Search Cryptocurrency</string>
+    <string name="filter">Filter</string>
+    <string name="cryptocurrency">Cryptocurrency</string>
+    <string name="nft">NFT</string>
+    <string name="top_crypto">Top Cryptocurrencies</string>
+    <string name="view_all">View All</string>
+    <string name="btc">BTC</string>
+    <string name="btc_name">Bitcoin</string>
+    <string name="btc_price">$36478 USD</string>
+    <string name="btc_delta">+2.5%</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">No NFTs are present</string>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/exchanges"
+            android:textAllCaps="true"
+            android:textColor="#0B0B0B"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/settings" />
+
+        <FrameLayout
+            android:id="@+id/notification_frame"
+            style="?attr/actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/settings"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/notification" />
+
+            <ImageView
+                android:id="@+id/active_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="-3dp"
+                android:gravity="center"
+                android:src="@drawable/active_notification" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="9dp"
+            android:layout_toLeftOf="@id/filter_button"
+            android:background="@drawable/search_bg"
+            android:theme="@style/search_view_style"
+            app:defaultQueryHint="@string/search_box"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:searchIcon="@drawable/search_icon" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawableLeft="@drawable/filter"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/filter"
+            android:textAllCaps="false"
+            android:textColor="#4D0B0B0B"
+            android:textSize="13sp"
+            app:cornerRadius="100dp"
+            app:strokeColor="#4D0B0B0B"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layer2">
+
+        <TextView
+            android:id="@+id/crypto_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/cryptocurrency"
+            android:textColor="#0B0B0B"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/crypto_currency"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/nft"
+            android:textColor="#4D0B0B0B"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_bar"
+        app:layout_constraintTop_toBottomOf="@id/layer3">
+
+
+    </FrameLayout>
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_bar"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom_nav_bar_bg"
+            app:itemIconSize="19dp"
+            app:itemIconTint="@color/select_nav_color"
+            app:itemTextColor="@color/select_nav_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/metaverse"
+        app:layout_constraintStart_toStartOf="@id/bottom_nav_bar"
+        app:layout_constraintEnd_toEndOf="@id/bottom_nav_bar"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav_bar"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav_bar"
+        android:translationZ="90dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
